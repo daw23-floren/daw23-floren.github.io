@@ -1,0 +1,31 @@
+.afm-c-cell {
+  border-color: black;
+  width: 30px;
+  height: 30px;
+  margin: 1.5px;
+  background-color: #111111;
+}
+.afm-color {
+  color: #111111;
+}
+#panel {
+  border: 1px solid rgb(255, 255, 255);
+  width: 300px;
+  border-radius: 15px;
+  padding: 4px;
+}
+.afm-r-row {
+  display: flex;
+  background-color: rgb(32, 30, 30);
+}
+.afm-btn {
+  padding-left: 40%;
+  padding-right: 40%;
+  padding-top: 6%;
+  padding-bottom: 6%;
+}
+.afm-shadow {
+  -webkit-box-shadow: inset -10px -10px 40px -11px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: inset -10px -10px 40px -11px rgba(0, 0, 0, 0.41);
+  box-shadow: inset -10px -10px 40px -11px rgba(0, 0, 0, 0.41);
+}

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pr2B Tetris</title>
+    <link rel="stylesheet" href="scss/styles.scss" />
+    <script type="module" src="./js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Rubik+Glitch&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/bcf5172c33.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="border-bottom">
+      <div class="container-fluid bg-body-bg">
+        <div class="row">
+          <div class="col justify-content-between d-flex">
+            <h1>El juego del TETRIS</h1>
+            <button
+              type="button"
+              class="btn btn-primary me-3"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExample"
+            >
+              <i class="fa-solid fa-bars m-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="mt-3">
+      <div class="container-fluid bg-body-bg">
+        <div class="row">
+          <div
+            class="col-6 col-md-12 col-lg-2 col-xl-2 col-xxl-2 offset-lg-2 order-3 order-lg-0"
+          >
+            <div>
+              <div
+                class="text-center border rounded border border-1 fs-3 m-2 shadow-lg"
+              >
+                <p class="fw-bold pt-3">Guardado</p>
+                <div class="m-2 pb-3 pt-2">
+                  <div>
+                    <div class="fila d-flex justify-content-center">
+                      <div class="afm-c-cell bg-primary"></div>
+                      <div class="afm-c-cell bg-primary"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="fila d-flex justify-content-center">
+                      <div class="afm-c-cell bg-primary"></div>
+                      <div class="afm-c-cell bg-primary"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center border rounded fs-4 m-2 shadow mt-4 m-2">
+                <p class="fw-bold m-2 pt-2">Tiempo</p>
+                <p>01:45</p>
+              </div>
+              <div class="text-center border rounded fs-4 m-2 shadow mt-4 m-2">
+                <p class="fw-bold m-2 pt-2">Nivel</p>
+                <p>1</p>
+                <hr />
+                <p class="fw-bold">Puntuación</p>
+                <p>120.000</p>
+                <hr />
+                <p class="fw-bold">Lineas</p>
+                <p>12</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-10 col-lg-4 mt-2">
+            <div class="d-flex justify-content-center pt-2">
+              <div id="panel">
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell bg-secondary afm-shadow"></div>
+                  <div class="afm-c-cell bg-secondary afm-shadow"></div>
+                  <div class="afm-c-cell bg-secondary afm-shadow"></div>
+                  <div class="afm-c-cell bg-secondary afm-shadow"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+                <div class="afm-r-row">
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                  <div class="afm-c-cell"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-6 col-md-2 col-lg-2 bg-body-bg justify-content-center"
+          >
+            <div class="m-3">
+              <div
+                class="text-center border rounded border border-1 fs-3 m-2 shadow pb-3"
+              >
+                <p class="fw-bold m-2">Nivel</p>
+                <div class="m-2">
+                  <div class="mt-3">
+                    <div class="fila d-flex justify-content-center">
+                      <div class="afm-c-cell bg-primary"></div>
+                      <div class="afm-c-cell bg-primary"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="fila d-flex justify-content-center">
+                      <div class="afm-c-cell bg-primary"></div>
+                      <div class="afm-c-cell bg-primary"></div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div>
+                  <div>
+                    <div class="m-2">
+                      <div>
+                        <div class="fila d-flex justify-content-center">
+                          <div class="afm-c-cell bg-secondary"></div>
+                          <div class="afm-c-cell bg-secondary"></div>
+                          <div class="afm-c-cell bg-secondary"></div>
+                          <div class="afm-c-cell bg-secondary"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div>
+                  <div>
+                    <div class="m-2">
+                      <div>
+                        <div class="fila d-flex justify-content-center">
+                          <div class="afm-c-cell bg-primary"></div>
+                          <div class="afm-c-cell bg-primary"></div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="fila d-flex justify-content-center">
+                          <div class="afm-c-cell bg-primary"></div>
+                          <div class="afm-c-cell bg-primary"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="pt-1">
+                  <div
+                    class="text-center border rounded border border-1 fs-3 m-2 shadow mt-3 mb-5 p-2"
+                  >
+                    <div class="m-2 pe-2">
+                      <button
+                        type="button"
+                        class="btn btn-primary me-3 afm-btn"
+                      >
+                        JUGAR
+                      </button>
+                    </div>
+                    <div class="m-2 pe-2 pt-2">
+                      <button
+                        type="button"
+                        class="btn btn-warning me-3 afm-btn text-white"
+                      >
+                        PAUSA
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="afm-color offcanvas-title" id="offcanvasExampleLabel">
+          Menu
+        </h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="afm-color">@Florencio</div>
+      </div>
+    </div>
+  </body>
+</html>

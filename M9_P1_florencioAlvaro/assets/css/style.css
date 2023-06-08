@@ -1,0 +1,456 @@
+/*Definimos el dimension de la web entera*/
+#web {
+  width: auto;
+  display: flex;
+  min-height: 100vh;
+}
+
+/*dimension izquierda*/
+#izq {
+  width: 20%;
+}
+
+/*dimension derecha*/
+#der {
+  width: 75%;
+}
+
+/*Color del enlace seccion superior*/
+#enlaces > main > nav > a {
+  color: #7f888f;
+}
+
+/*Color del enlace etiqueta strong*/
+strong {
+  color: #000000;
+}
+
+/*oculto los submenus*/
+li ul {
+  display: none;
+}
+
+/*muestro los submenu*/
+li:hover ul {
+  display: block;
+}
+
+/*Color de los enlaces*/
+ul li ul li {
+  color: #7f888f;
+}
+
+/*Quito los li del nav*/
+nav ul li {
+  list-style: none;
+}
+
+/*asignar el estilo del navegador del menu a la izquierda*/
+#menu nav ul li {
+  list-style: none;
+  font-size: 0.9em;
+  letter-spacing: 0.075em;
+  border-top: solid 1px rgba(210, 215, 217, 0.75);
+  padding: 0.625em 0;
+}
+
+/*dimension del txt del body en general*/
+body {
+  font-size: 20px;
+}
+
+/*Color y dimension de los hr por defecto*/
+hr {
+  color: #5b6063;
+  margin: 20px;
+}
+
+/*dimension y Parte del lado de los h2 dentro del elemento del menu h2*/
+#menu h2 {
+  font-size: 20px;
+  margin-left: 25px;
+}
+
+/*Caracteristicas de los h2*/
+h2 {
+  color: #3d4449;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 1.75em;
+  border-bottom: solid 3px #f56a6a;
+  display: inline-block;
+  margin: 0 0 2.5em 0;
+}
+
+/*color y altura del menu*/
+#menu {
+  background-color: #f5f6f7;
+  height: 100%;
+}
+
+/*formato del menu*/
+#menu ul a {
+  border-bottom: 0;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+/*formato menu icono*/
+#icons {
+  float: right;
+  display: flex;
+  letter-spacing: 1em;
+  color: black;
+  margin: auto;
+}
+
+/*Fformato enlaces seccion top*/
+#enlaces {
+  border-bottom: solid 5px #f56a6a;
+  padding: 0em 0 1em 0;
+  position: relative;
+  border-bottom: solid 3px #f56a6a;
+  margin: 50px;
+  text-decoration: none;
+}
+
+/*Quito el estilo de todos los enlaces*/
+a {
+  text-decoration: none !important;
+}
+
+/*cambio el color de los enlaces de la seccion de arriba*/
+#enlaces a {
+  color: black;
+  font-family: "Roboto Slab", serif;
+}
+
+/*dimension de las imágenes*/
+#imagen img {
+  border-radius: 0.375em;
+  width: 80%;
+  margin: 110px;
+}
+
+/*Estilo de los botones*/
+.actions {
+  list-style: none;
+  padding-left: 0;
+}
+
+/*dimension del txt*/
+#txt {
+  width: 50%;
+  margin: 50px;
+}
+
+/*dimension de la imagen id #imagen*/
+#imagen {
+  width: 75%;
+}
+
+/* contenido en tipo flex*/
+#contenido {
+  display: flex;
+  margin-left: 1em;
+}
+
+/*definicion de h1 por defecto*/
+h1 {
+  color: #3d4449;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 3.5em;
+}
+
+/*creo nargen para los txts*/
+#txtMenu {
+  margin: 30px;
+}
+
+/*Estilo del botón mas grende*/
+#boton1 {
+  border-radius: 0.375em;
+  box-shadow: inset 0 0 0 2px #f56a6a;
+  color: #f56a6a;
+  display: inline-block;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  height: 3.5em;
+  letter-spacing: 0.075em;
+  line-height: 3.5em;
+  padding: 0 2.25em;
+  text-align: center;
+  text-decoration: none;
+}
+
+/*Estilo del botón del menú izquierda*/
+#boton2 {
+  border-radius: 0.375em;
+  box-shadow: inset 0 0 0 2px #f56a6a;
+  color: #f56a6a !important;
+  display: inline-block;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  height: 3.5em;
+  letter-spacing: 0.075em;
+  line-height: 3.5em;
+  padding: 0 2.25em;
+  text-align: center;
+  text-decoration: none;
+}
+
+/*estilo articulos*/
+#articulos {
+  display: none;
+}
+
+/*Formato de dentro de la seccion*/
+section p {
+  color: #7f888f;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13pt;
+  font-weight: 400;
+  line-height: 1.65;
+  margin: 10px;
+}
+
+/*id P*/
+#p {
+  color: #7f888f;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 0 2em 0;
+  letter-spacing: 0.04em;
+}
+
+/*Generales para etiqueta img*/
+img {
+  border-radius: 0.375em;
+  margin: 20px;
+}
+
+/*id de responsive*/
+#responsive {
+  color: #7f888f;
+  font-family: "Roboto Slab", serif;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.075em;
+  margin-top: -0.5em;
+}
+
+/*caracteristicas creada para footer*/
+#foot {
+  color: #9fa3a6;
+  font-size: 0.7em;
+  font-family: "Open Sans", sans-serif;
+  margin: 20px;
+  text-decoration: none;
+}
+
+/*estilo para los enlaces de los contactos*/
+#contacto li i {
+  color: #f56a6a;
+  display: inline-block;
+  font-size: 1em;
+  height: 1.125em;
+  left: 0;
+  line-height: 1.125em;
+  text-align: center;
+  top: 1em;
+  width: 1.5em;
+}
+
+/*estilo para contactos*/
+#contacto li a {
+  color: #9fa3a6;
+  font-size: 0.75678em;
+  font-family: "Open Sans", sans-serif;
+  margin: 5px;
+  padding-right: 20px;
+  text-decoration: none;
+}
+
+/*dimensions izquierdos*/
+#iconsIzq {
+  width: 50%;
+}
+
+/*dimension del div de la direcha para los iconos*/
+#iconsDer {
+  width: 50%;
+}
+
+#iconos {
+  display: flex;
+}
+
+/*uso de clase para el rombo*/
+.rombo {
+  transform: rotate(45deg);
+  border-radius: 0.25rem;
+  border: solid 2px rgba(210, 215, 217, 0.75);
+  display: block;
+  left: 50%;
+  margin-left: 2em;
+  top: 50%;
+  height: 5.5em;
+  width: 5.5em;
+}
+
+/*span para los rombos de manera general */
+span {
+  color: #f56a6a;
+  font-size: 2.75rem;
+  margin: 35px 0 0 35px;
+  top: 0.05em;
+  transform: rotate(-45deg);
+}
+
+/*id usada para los rombos*/
+#rombos {
+  border-top: solid 2px rgba(210, 215, 217, 0.75);
+  padding: 5em 0 3em 3em;
+  margin-left: 1em;
+}
+
+/*seccion de abajo del todos*/
+.content {
+  margin: 0 0 0 15em;
+}
+
+/*clase content*/
+.content p {
+  color: #7f888f;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13pt;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/*Caracteristicas para lado de los h3*/
+h3 {
+  font-size: 1.25em;
+  color: #3d4449;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 1em 0;
+}
+
+/*Parte del lado, borde y relleno del div id="fotos"*/
+#fotos {
+  margin-left: 4em;
+  border-top: solid 2px rgba(210, 215, 217, 0.75);
+  padding-top: 4em;
+}
+
+/*borde en la seccion de arriba*/
+#ftsUp {
+  display: flex;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: solid 2px rgba(210, 215, 217, 0.75);
+}
+
+/*eliminar el estilo de los enlaces en el div */
+#ftsUp a {
+  text-decoration: none;
+}
+
+/*Insertar un  conenido en flexen el div de */
+#ftsBot {
+  display: flex;
+}
+
+/*eliminar el estilo de los enlaces en el div */
+#ftsBot a {
+  text-decoration: none;
+}
+
+/*Parte del lado de los p del div */
+#ftsUp p {
+  margin-left: 1.7em;
+}
+
+/*Parte del lado de los h3 del div */
+#ftsUp h3 {
+  margin-left: 1.2em;
+}
+
+/*Parte del lado y dimension de los ul del div */
+#ftsUp ul {
+  margin-left: 1.7em;
+  width: 10%;
+}
+
+/*dimension de las imagenes del div */
+#ftsUp img {
+  width: 80%;
+}
+
+/*Parte del lado de los p del div */
+#ftsBot p {
+  margin-left: 1.7em;
+}
+
+/*Parte del lado de los h3 del div */
+#ftsBot h3 {
+  margin-left: 1.2em;
+}
+
+/*Parte del lado y dimension de los ul del div */
+#ftsBot ul {
+  margin-left: 1.7em;
+  width: 10%;
+}
+
+/*dimension de las imagenes del div */
+#ftsBot img {
+  width: 80%;
+}
+
+/*botones la clase botons*/
+.botons {
+  border-radius: 0.375em;
+  box-shadow: inset 0 0 0 2px #f56a6a;
+  color: #f56a6a;
+  display: inline-block;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  height: 3.5em;
+  letter-spacing: 0.075em;
+  line-height: 3.5em;
+  padding: 0 2.25em;
+  text-align: center;
+  text-decoration: none;
+}
+
+/*Color de fondo y relleno del div del buscador*/
+#buscador {
+  background-color: #eff1f2;
+  padding: 1em 0 1em 2em;
+}
+
+/*barra de búsqueda*/
+#barra {
+  height: 2.75em;
+  background: #ffffff;
+  border-radius: 0.375em;
+  border: solid 1px rgba(210, 215, 217, 0.75);
+  width: 80%;
+}
+
+/*icono de la lupa*/
+#lupa {
+  color: #7f888f;
+  position: absolute;
+  margin: 10px 0 0 12em;
+  transform: rotate(85deg);
+  opacity: 0.325;
+}

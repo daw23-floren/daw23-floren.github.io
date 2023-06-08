@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pr2-Bootstrap</title>
+    <!-- JSS para Boostrap -->
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="scss/estilo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid">
+        <div class="container">
+          <nav class="row mt-2 mb-2">
+            <div class="col-2">
+              <a class="navbar-brand" href="#">
+                <img src="./img/logo.PNG" class="d-inline-block w-75 mt-1" />
+              </a>
+            </div>
+            <div class="col-8">
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link text-primary" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item negro">
+                  <a class="nav-link text-dark" href="#">About Me</a>
+                </li>
+                <li class="nav-item negro">
+                  <a class="nav-link text-dark" href="#">Testimonials</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <button
+                type="button"
+                class="btn btn-outline-primary bg-primary text-white"
+              >
+                Contact Me
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="container">
+          <section id="header" class="bg-primary bg-secondary">
+            <div class="row">
+              <div class="col-6">
+                <h6>Hey, I am John</h6>
+                <h1 class="pt-3">
+                  <strong
+                    >I create
+                    <span class="text-primary">product design</span> and brand
+                    experience</strong
+                  >
+                </h1>
+                <p class="afm-body afm-spaceP">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary mt-3 bg-primary text-white"
+                >
+                  Get in Touch
+                </button>
+              </div>
+              <div class="col-6">
+                <img class="img-fluid" src="img/cara.png" alt="cara" />
+              </div>
+            </div>
+          </section>
+          <section id="skill">
+            <div class="row pb-5">
+              <div class="col-12">
+                <h6 class="pt-3">My Skills</h6>
+                <h1 class="pt-3">My Expertise</h1>
+              </div>
+            </div>
+            <div class="row pb-5">
+              <div class="col-3 bg-secondary skills">
+                <div class="p-4">
+                  <div class="pb-4">
+                    <img
+                      src="img/producto.png"
+                      class="afm-img"
+                      alt="producto"
+                    />
+                  </div>
+                  <div>
+                    <h3 class="pb-3">Strategy &amp; Direction</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros elementum tristique.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 bg-secondary skills">
+                <div class="p-4">
+                  <div class="pb-4">
+                    <img src="img/tag_1.png" class="afm-img" alt="tag" />
+                  </div>
+                  <div>
+                    <h3 class="pb-3">Branding &amp; Logo</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros elementum tristique.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 bg-secondary skills">
+                <div class="p-4">
+                  <div class="pb-4">
+                    <img src="img/pen.png" class="afm-img" alt="pen" />
+                  </div>
+                  <div>
+                    <h3 class="pb-3">UI &amp; UX Design</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros elementum tristique.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 bg-secondary">
+                <div class="p-4">
+                  <div class="pb-4">
+                    <img
+                      src="img/feather-pen 1.png"
+                      class="afm-img"
+                      alt="pen"
+                    />
+                  </div>
+                  <div>
+                    <h3 class="pb-3">Webflow Development</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros elementum tristique.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="frame">
+            <div class="row">
+              <div class="col-6">
+                <img class="img-fluid" src="img/cara2.png" alt="cara" />
+              </div>
+              <div class="col-6 pt-5 contenedor">
+                <div class="hijo">
+                  <h6 class="pb-1">About</h6>
+                  <h2 class="pb-2">About Me</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Fusce varius faucibus massa sollicitudin amet augue. Nibh
+                    metus a semper purus mauris duis. Lorem eu neque, tristique
+                    quis duis. Nibh scelerisque ac adipiscing velit non nulla in
+                    amet pellentesque.
+                  </p>
+                  <p class="mt-3">
+                    Sit turpis pretium eget maecenas. Vestibulum dolor mattis
+                    consectetur eget commodo vitae. Amet pellentesque sit
+                    pulvinar lorem mi a, euismod risus r.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="blog" class="pb-5">
+            <div class="row pb-5">
+              <div class="col-6">
+                <h6 class="pt-3">Recent Projects</h6>
+                <h2>My Portfolio</h2>
+              </div>
+              <div class="col-6 d-flex justify-content-md-end">
+                <button type="button" class="btn btn-danger mb-4 mt-4">
+                  Visit My Dribbble
+                </button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="card" style="width: 100%">
+                  <img src="img/casa.png" alt="casa" />
+                  <div class="card-body">
+                    <h3>Ahuse</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros.
+                    </p>
+                    <a href="#">View In Dribbble</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card" style="width: 100%">
+                  <img src="img/app.png" alt="app" />
+                  <div class="card-body">
+                    <h3>App Dashboard</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros.
+                    </p>
+                    <a href="#">View In Dribbble</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card" style="width: 100%">
+                  <img src="img/pc.png" alt="pc" />
+                  <div class="card-body">
+                    <h3>Easy Rent</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros.
+                    </p>
+                    <a href="#">View In Dribbble</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="testimonial" class="pb-5">
+            <div class="row">
+              <div class="col-12">
+                <h6 class="pt-3">Clients Feedback</h6>
+                <h2>Customer testimonials</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <img src="./img/estrellas.png" alt="estrellas" class="w-25" />
+                <p>
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique. Duis
+                  cursus, mi quis viverra.
+                </p>
+                <div class="row">
+                  <div class="col-3">
+                    <img
+                      src="./img/Dianne.png"
+                      alt="Dianne"
+                      class="w-100 h-100"
+                    />
+                  </div>
+                  <div class="col-4">
+                    <h6>Dianne Russell</h6>
+                    <h6>Starbucks</h6>
+                  </div>
+                  <div class="col-5"></div>
+                </div>
+              </div>
+              <div class="col-4">
+                <img src="./img/estrellas.png" alt="estrellas" class="w-25" />
+                <p>
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique. Duis
+                  cursus, mi quis viverra.
+                </p>
+                <div class="row">
+                  <div class="col-3">
+                    <img
+                      src="./img/kristin.png"
+                      alt="kristin"
+                      class="w-100 h-100"
+                    />
+                  </div>
+                  <div class="col-4">
+                    <h6>Kristin Watson</h6>
+                    <h6>Louis Vuitton</h6>
+                  </div>
+                  <div class="col-5"></div>
+                </div>
+              </div>
+              <div class="col-4">
+                <img src="./img/estrellas.png" alt="estrellas" class="w-25" />
+                <p>
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique. Duis
+                  cursus, mi quis viverra.
+                </p>
+                <div class="row">
+                  <div class="col-3">
+                    <img
+                      src="./img/Kathryn.png"
+                      alt="kristin"
+                      class="w-100 h-100"
+                    />
+                  </div>
+                  <div class="col-4">
+                    <h6>Kathryn Murphy</h6>
+                    <h6>McDonald's</h6>
+                  </div>
+                  <div class="col-5"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="contact">
+            <div class="inputs">
+              <div>
+                <h6>Get In Touch</h6>
+                <h2>Contact me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <form>
+                <div class="row">
+                  <div class="col-6">
+                    <label for="exampleInputEmail1" class="form-label"
+                      >First Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      aria-describedby="nombre"
+                    />
+                  </div>
+                  <div class="col-6">
+                    <label for="exampleInputEmail1" class="form-label"
+                      >Las Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      aria-describedby="apellido"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <label for="exampleInputEmail1" class="form-label"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                    />
+                  </div>
+                  <div class="col-6">
+                    <label for="exampleInputEmail1" class="form-label"
+                      >Las Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      aria-describedby="apellido"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container-fluid">
+        <div class="container">
+          <nav class="row mt-2 mb-2 pt-5 pb-5">
+            <div class="col-2">
+              <a class="navbar-brand" href="#">
+                <img src="./img/logo.PNG" class="d-inline-block w-75 mt-1" />
+              </a>
+            </div>
+            <div class="col-8">
+              <ul class="nav justify-content-center negro">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Testimonials</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <input
+                class="btn btn-outline-primary"
+                type="submit"
+                value="Contact Me"
+              />
+            </div>
+          </nav>
+          <div class="row pb-5 mt-2 linea">
+            <div class="col-6">Made with 💖 by Florencio</div>
+            <div class="col-2"><p>Privacy Policy</p></div>
+            <div class="col-2"><p>Terms of Service</p></div>
+            <div class="col-2"><p>Cookies Settings</p></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
